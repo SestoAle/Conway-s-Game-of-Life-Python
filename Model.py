@@ -105,8 +105,6 @@ class Model(EventDispatcher):
         # Convolve the image with a kernel [2,2,2,2,1,2,2,2,2,2].
         # Pass the image to the try_evolve() method and then re-render the image
 
-        print(dt)
-
         bitmap = self.image.point(lambda p: p > 0 and 1)
 
         # Add padding to the image for the convolution
