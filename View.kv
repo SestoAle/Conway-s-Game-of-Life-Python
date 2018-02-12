@@ -1,0 +1,84 @@
+#:import GameTable GameTable
+#:import model Model.Model
+
+
+<ButtonBoxLayout@BoxLayout>:
+    orientation: 'horizontal'
+    size_hint: 1, 0.1
+
+BoxLayout:
+
+    orientation: 'vertical'
+
+    GameTable:
+        id: gametable
+        texture_image: model.texture_to_render
+        on_size: model.image_to_texture()
+        on_touch_down: model.on_touch_down(*args)
+        on_touch_move: model.on_touch_move(*args)
+
+    ButtonBoxLayout:
+        ToggleButton:
+            text: model.start_text
+            state: 'down' if model.is_running else 'normal'
+            on_press: model.start_evolve()
+
+        Button:
+            text: "Clear"
+            on_press: model.clear()
+
+    ButtonBoxLayout:
+        Spinner:
+            id: spinner
+            text: "Load"
+            values: ("10 Cell Row", "Small Exploder", "Exploder", "Spaceship", "Tumbler", "Gosper Cannon", "My Image")
+            on_text: model.load(args)
+        Button:
+            text: "Save"
+            on_press: model.save()
+
+    GridLayout:
+
+        size_hint: 1, 0.25
+        cols: 3
+        rows: 2
+        padding: 50, 35, 50, 0
+
+        Label:
+            size_hint: 1, 0.5
+            text: 'Cells: ' + str(slider_num_cells.value) + 'x' + str(slider_num_cells.value)
+
+        Label:
+            size_hint: 1, 0.5
+            text: 'Framerate: ' + str(slider_time.value) + 'fps'
+
+        Label:
+            size_hint: 1, 0.5
+            text: 'Heatmap'
+
+        Slider:
+            id: slider_num_cells
+            range: (model.min_num_cells, model.max_num_cells)
+            step: 2
+            value: model.num_cells
+            on_value: model.num_cells = self.value
+
+        Slider:
+            id: slider_time
+            range: (model.min_time, model.max_time)
+            step: 1
+            value: model.time
+            on_value: model.time = self.value
+
+
+        CheckBox:
+            size_hint: 1, 0.5
+            id:check_heatmap
+            active: bool(model.heatmap)
+            on_active: model.heatmap = model.heatmap^1
+            background_checkbox_down: "checked.png"
+            background_checkbox_normal: "n_checked.png"
+
+
+
+
