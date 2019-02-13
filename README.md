@@ -30,11 +30,10 @@ The app provides some extra features:
 ## Requirements
 | Software | Version | Required |
 | --------|-----------------| ---------|
-| **Python** | tested on v3.7 | Yes|
-| **Unity** | tested on v2018.3.5f1 | Yes |
-| **ml-agents** | tested on v0.5.0 | Yes | 
-| **Tensorflow** | tested on v1.12.0 | Yes |
-| **Tensorforce** | tested on v0.4.3 | Yes |
+| **Python** | >= v3.5 | Yes|
+| **Kivy** | tested on v1.10.0 | Yes |
+| **Numpy** | tested on v1.13.3 | Yes | 
+| **Pillow** | tested on v4.3.0 | Yes |
 
 ## License
 Licensed under the term of [MIT License](https://github.com/SestoAle/Conway-s-Game-of-Life/blob/master/LICENSE).
