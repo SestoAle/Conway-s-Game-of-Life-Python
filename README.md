@@ -14,13 +14,12 @@ The initial pattern constitutes the seed of the system. The first generation is 
 </p>
 
 ## Functionalities
+You can draw your starting configuration with mouse clicks and save the image to load it at any time later; you can also 
+load some pre-built configurations.
 
 <p align="center">
 <img  src="https://media.giphy.com/media/kh71Gg2qOJangAGiuo/giphy.gif" width="50%" height="50%"/>
 </p>
-
-You can draw your starting configuration with mouse clicks and save the image to load it at any time later; you can also 
-load some pre-built configurations.
 
 The app provides some extra features:
 
