@@ -27,5 +27,14 @@ The app provides some extra features:
 * you can speedup time increasing frame rate, starting from 1 fps to 60;
 * you can see the cells lifetime pressing the ```heatmap``` toggle.
 
+## Requirements
+| Software | Version | Required |
+| --------|-----------------| ---------|
+| **Python** | tested on v3.7 | Yes|
+| **Unity** | tested on v2018.3.5f1 | Yes |
+| **ml-agents** | tested on v0.5.0 | Yes | 
+| **Tensorflow** | tested on v1.12.0 | Yes |
+| **Tensorforce** | tested on v0.4.3 | Yes |
+
 ## License
 Licensed under the term of [MIT License](https://github.com/SestoAle/Conway-s-Game-of-Life/blob/master/LICENSE).
