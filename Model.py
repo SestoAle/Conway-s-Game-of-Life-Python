@@ -205,7 +205,6 @@ class Model(EventDispatcher):
             return
 
         load_img = Image.open("template/" + value[1] + ".png")
-        print(load_img.size[1])
         self.image = Image.new('L', (self.size_image, self.size_image), "black")
         self.image.paste(load_img, (int(self.size_image/2 - load_img.size[1]/2), int(self.size_image/2 - load_img.size[1]/2)))
         self.image_to_texture()
